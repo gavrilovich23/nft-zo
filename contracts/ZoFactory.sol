@@ -14,10 +14,7 @@ contract ZoFactory is Ownable, ERC721URIStorage {
     string private _baseTokenURI;
     string private _baseContractURI;
 
-    mapping (uint256 => address) public zombieToOwner;
-    mapping (address => uint256) public ownerZombieCount;
-
-    constructor(string memory _tokenURI, string memory _contractURI) ERC721("NFTZombie", "NZMB") {
+    constructor(string memory _tokenURI, string memory _contractURI) ERC721("NFTZO_1", "NZO1") {
         console.log("Deploying the NFTZombie ...", _tokenURI, _contractURI);
 
         _baseTokenURI = _tokenURI;
