@@ -14,11 +14,22 @@ contract ZoFactory is Ownable, ERC721URIStorage {
     string private _baseTokenURI;
     string private _baseContractURI;
 
-    constructor(string memory _tokenURI, string memory _contractURI) ERC721("NFTZO_1", "NZO1") {
+    constructor(string memory _tokenURI, string memory _contractURI) ERC721("NFTZO_2", "NZO2") {
         console.log("Deploying the NFTZombie ...", _tokenURI, _contractURI);
 
         _baseTokenURI = _tokenURI;
         _baseContractURI = _contractURI;
+
+        createZombie();
+        createZombie();
+        createZombie();
+        createZombie();
+        createZombie();
+        createZombie();
+        createZombie();
+        createZombie();
+        createZombie();
+        createZombie();
     }
 
     function _baseURI() internal view virtual override returns (string memory) {
